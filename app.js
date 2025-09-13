@@ -3,10 +3,11 @@ const dataContainer = document.getElementById('data-container');
 const loadBtn = document.getElementById('load-data-btn');
 
 function fetchData() {
+   dataContainer.innerHTML = `<span class = "loading">Loading:</span>`;
   fetch(API_ENDPOINT)
     .then(response => response.json())
     .then(data => {
-      dataContainer.innerHTML = `<span class = "loading">Loading:</span>`;
+      dataContainer.innerHTML = `<span class = "loading">Loading:</span> ${data.message}`;
     })
     .catch(error => {
       dataContainer.innerHTML = `<span class="error">Failed to load data.</span>`;
