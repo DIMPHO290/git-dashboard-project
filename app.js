@@ -3,7 +3,7 @@ const dataContainer = document.getElementById('data-container');
 const loadBtn = document.getElementById('load-data-btn');
 
 function fetchData() {
-   dataContainer.innerHTML = `<span class = "loading">Loading:</span>`;
+   dataContainer.innerHTML = `<span class = "loading">Loading ...</span>`;
   fetch(API_ENDPOINT)
     .then(response => response.json())
     .then(data => {
