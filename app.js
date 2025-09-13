@@ -7,7 +7,7 @@ function fetchData() {
   fetch(API_ENDPOINT)
     .then(response => response.json())
     .then(data => {
-      dataContainer.innerHTML = `<strong class = "loading">Data Loading:</strong> ${data.message}`;
+      dataContainer.innerHTML = `<strong>Data Loading:</strong> ${data.message}`;
     })
     .catch(error => {
       dataContainer.innerHTML = `<span class="error">Failed to load data.</span>`;
